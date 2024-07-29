@@ -123,7 +123,7 @@ const App = () => {
             <path strokeLinecap='round' strokeLinejoin='round' d='M4 6h16M4 12h16m-7 6h7' />
           </svg>
         </button>
-        <h1 className='text-2xl font-bold text-gray-800'>TAKLIFNOMA</h1>
+        <h1 className='special-font text-2xl font-bold text-gray-800'>TAKLIFNOMA</h1>
         <button onClick={togglePlay} className='text-gray-700'>
           {isPlaying ? (
             <svg
