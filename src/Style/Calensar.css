@@ -1,0 +1,148 @@
+.calendar-container {
+  background-image: url('/path/to/your/background/image.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.calendar h2 {
+  font-family: 'Your-Font-Name', sans-serif;
+}
+
+.calendar div {
+  font-family: 'Your-Font-Name', sans-serif;
+}
+
+.address-container {
+  background-image: url('/path/to/your/background/image.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.address-container p {
+  font-family: 'Your-Font-Name', sans-serif;
+}
+
+button {
+  font-family: 'Your-Font-Name', sans-serif;
+}
+
+.timeline-container {
+  position: relative;
+  background-image: url('/path/to/your/background/image.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.timeline-event {
+  position: relative;
+}
+
+.event-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+.timeline-container {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.timeline-event {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+.timeline-event .event-icon {
+  margin-bottom: 8px;
+}
+
+.event-details {
+  text-align: center;
+}
+/* Calensar.css */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in forwards;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.timeline-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.timeline {
+  padding-left: calc(50% - 24px);
+}
+
+.timeline-event {
+  position: relative;
+}
+
+.timeline-event::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #fdf2f8;
+  border: 2px solid #fbcfe8;
+  border-radius: 50%;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.event-icon {
+  position: absolute;
+  left: -54px;
+  transform: translateX(-50%);
+}
+
+.event-details {
+  margin-left: 20px;
+}

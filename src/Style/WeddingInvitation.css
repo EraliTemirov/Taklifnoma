@@ -1,0 +1,138 @@
+/* WeddingInvitation.css */
+.invitation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.invitation {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.invitation.visible {
+  opacity: 1;
+}
+
+.geometric-frame {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 2px solid #ffd700;
+  transform: rotate(45deg);
+  margin: 50px;
+}
+
+.flower {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.flower::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.top-left {
+  top: -30px;
+  left: -30px;
+}
+
+.top-right {
+  top: -30px;
+  right: -30px;
+}
+
+.bottom-left {
+  bottom: -30px;
+  left: -30px;
+}
+
+.bottom-right {
+  bottom: -30px;
+  right: -30px;
+}
+
+.leaf {
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.leaf.top-left {
+  top: 0;
+  left: 40px;
+  transform: rotate(-45deg);
+}
+
+.leaf.top-right {
+  top: 40px;
+  right: 0;
+  transform: rotate(45deg);
+}
+
+.leaf.bottom-left {
+  bottom: 40px;
+  left: 0;
+  transform: rotate(-135deg);
+}
+
+.leaf.bottom-right {
+  bottom: 0;
+  right: 40px;
+  transform: rotate(135deg);
+}
+
+.initials {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  font-size: 48px;
+  font-family: 'Script MT', cursive;
+  color: #333;
+}
+
+.arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  border-right: 2px solid #ffb6c1;
+  border-bottom: 2px solid #ffb6c1;
+  transform: rotate(45deg);
+  margin-bottom: 10px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0) rotate(45deg);
+  }
+  40% {
+    transform: translateY(-10px) rotate(45deg);
+  }
+  60% {
+    transform: translateY(-5px) rotate(45deg);
+  }
+}
