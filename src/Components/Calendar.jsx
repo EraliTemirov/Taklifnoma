@@ -26,7 +26,6 @@ const Calendar = () => {
 
     return () => {
       if (calendarRef.current) {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
         observer.unobserve(calendarRef.current)
       }
     }
@@ -35,7 +34,7 @@ const Calendar = () => {
   return (
     <div
       ref={calendarRef}
-      className='calendar-container fade-in flex flex-col items-center justify-center py-5 bg-gray-50'
+      className='calendar-container fade-in flex flex-col items-center justify-center py-5'
     >
       <div className='text-center'>
         <p className='special-font text-lg sm:text-xl md:text-2xl font-bold text-gray-700'>
@@ -44,10 +43,7 @@ const Calendar = () => {
         <p className='special-font text-sm sm:text-base md:text-lg text-gray-500'>Soat 18:00 da</p>
       </div>
       <div className='calendar bg-white shadow-lg rounded-lg p-4 sm:p-6 lg:p-8'>
-        <div className='flex justify-between items-center mb-4'>
-          <h2 className='text-xl sm:text-2xl md:text-3xl font-bold text-gray-800'>Oktabr</h2>
-        </div>
-        <div className='special-font grid grid-cols-7 gap-2 sm:gap-4 text-center'>
+        <div className='special-font grid grid-cols-7 gap-4 sm:gap-4 text-center'>
           <div className='font-bold text-gray-500'>DU</div>
           <div className='font-bold text-gray-500'>SE</div>
           <div className='font-bold text-gray-500'>CHO</div>
@@ -59,10 +55,10 @@ const Calendar = () => {
             <div key={i}></div>
           ))}
           {[...Array(31)].map((_, i) => (
-            <div key={i} className={`${i + 1 === 29 ? 'text-red-500' : 'text-gray-700'}`}>
+            <div key={i} className={`${i + 1 === 29 ? 'text-red-500 p-2' : 'text-gray-700 p-2'}`}>
               {i + 1}
               {i + 1 === 29 && (
-                <span className='block text-red-500'>
+                <span className='block text-red-500 heart-icon'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     fill='none'

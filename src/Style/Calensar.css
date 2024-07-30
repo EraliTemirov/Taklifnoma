@@ -1,92 +1,137 @@
 .calendar-container {
-  background-image: url('/path/to/your/background/image.png');
-  background-size: cover;
-  background-position: center;
+  background: #fff8f0;
+  padding: 20px;
+  border-radius: 8px;
 }
 
-.calendar h2 {
-  font-family: 'Your-Font-Name', sans-serif;
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
-.calendar div {
-  font-family: 'Your-Font-Name', sans-serif;
+.fade-in-visible {
+  opacity: 1;
 }
 
-.address-container {
-  background-image: url('/path/to/your/background/image.png');
-  background-size: cover;
-  background-position: center;
+.calendar {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.address-container p {
-  font-family: 'Your-Font-Name', sans-serif;
+.special-font {
+  font-family: 'Brush Script MT', cursive;
+}
+
+.heart-icon {
+  display: inline-block;
+  position: relative;
+  top: -4px;
+}
+
+.grid-cols-7 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.text-red-500 {
+  color: #f56565;
+}
+
+.text-gray-500 {
+  color: #a0aec0;
+}
+
+.text-gray-700 {
+  color: #4a5568;
+}
+
+.text-gray-800 {
+  color: #2d3748;
 }
 
 button {
   font-family: 'Your-Font-Name', sans-serif;
 }
-
 .timeline-container {
-  position: relative;
-  background-image: url('/path/to/your/background/image.png');
-  background-size: cover;
-  background-position: center;
+  background: #fff8f0;
+  padding: 40px;
+  border-radius: 8px;
 }
 
 .timeline {
   position: relative;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .timeline-line {
   position: absolute;
+  width: 4px;
+  background-color: #fbb6ce;
   top: 0;
   bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .timeline-event {
-  position: relative;
-}
-
-.event-icon img {
-  width: 32px;
-  height: 32px;
-}
-
-.timeline-container {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-}
-
-.timeline {
-  position: relative;
-}
-
-.timeline-line {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
-
-.timeline-event {
-  position: relative;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  margin-bottom: 40px;
 }
 
-.event-icon img {
-  width: 32px;
-  height: 32px;
+.timeline-event:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
-.timeline-event .event-icon {
-  margin-bottom: 8px;
+.event-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: 2px solid #fbb6ce;
+  border-radius: 50%;
+  position: relative;
 }
 
 .event-details {
   text-align: center;
+  margin: 0 16px;
 }
+
+.event-time {
+  font-size: 24px;
+  font-family: 'Brush Script MT', cursive;
+  color: #718096;
+}
+
+.event-description {
+  font-size: 14px;
+  color: #a0aec0;
+}
+
+@media (min-width: 640px) {
+  .event-time {
+    font-size: 28px;
+  }
+
+  .event-description {
+    font-size: 18px;
+  }
+}
+
+.timeline-flower {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
 /* Calensar.css */
 
 @keyframes fadeIn {
