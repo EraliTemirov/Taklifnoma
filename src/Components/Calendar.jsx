@@ -16,7 +16,7 @@ const Calendar = () => {
         })
       },
       {
-        threshold: 0.1, // Start animation when 10% is visible
+        threshold: 0.1,
       }
     )
 
@@ -26,6 +26,7 @@ const Calendar = () => {
 
     return () => {
       if (calendarRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         observer.unobserve(calendarRef.current)
       }
     }
