@@ -4,41 +4,35 @@ import RingsIcon from '../Image/diamond-ring.png'
 import DressIcon from '../Image/dress.png'
 import '../Style/Calensar.css'
 
-const Timeline = () => {
+const WeddingTimeline = () => {
   const events = [
-    {time: '12:00', description: 'KUYOVNAVKAR', icon: SuitIcon},
-    {time: '15:00', description: 'FOTOSESSIYA', icon: CameraIcon},
-    {time: '18:00', description: 'NIKOH KECHASI', icon: RingsIcon},
-    {time: '21:00', description: 'KELINSALOM', icon: DressIcon},
+    {time: '12:00', title: 'KUYOVNAVKAR', icon: SuitIcon},
+    {time: '15:00', title: 'FOTOSESSIYA', icon: CameraIcon},
+    {time: '18:00', title: 'NIKOH KECHASI', icon: RingsIcon},
+    {time: '21:00', title: 'KELINSALOM', icon: DressIcon},
   ]
 
   return (
-    <div className='timeline-container bg-white py-10 px-4 sm:px-6 lg:px-8'>
-      <h2 className='text-2xl sm:text-3xl font-light text-gray-400 text-center mb-10'>
-        Kun Programmasi
-      </h2>
-      <div className='timeline relative'>
-        <div className='timeline-line'></div>
-        {events.map((event, index) => (
-          <div
-            key={index}
-            className={`timeline-event ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
-          >
-            <div className='event-icon'>
-              <img src={event.icon} alt={event.description} className='w-8 h-8' />
+    <div className='bg-white p-8'>
+      <div className='max-w-md mx-auto'>
+        <div className='relative'>
+          <div className='absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-pink-200'></div>
+          {events.map((event, index) => (
+            <div key={index} className='flex items-center mb-2'>
+              <div className={`w-1/2 ${index % 2 === 0 ? 'text-right pr-8' : 'order-2 pl-8'}`}>
+                <img src={event.icon} alt={event.title} className='w-16 h-16 mt-4 inline-block' />
+              </div>
+              <div className={`w-1/2 ${index % 2 === 0 ? 'pl-8' : 'order-1 text-right pr-8'}`}>
+                <p className='text-xl font-semibold text-gray-400'>{event.time}</p>
+                <p className='text-sm text-gray-400 uppercase'>{event.title}</p>
+              </div>
+              <div className='absolute left-1/2 transform -translate-x-1/2 w-3 h-3 bg-pink-300 rounded-full'></div>
             </div>
-            <div className='event-details'>
-              <p className='event-time'>{event.time}</p>
-              <p className='event-description'>{event.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className='timeline-flower'>
-        <img src='https://le-invitations.netlify.app/img/footer-flower.png' alt='' />
+          ))}
+        </div>
       </div>
     </div>
   )
 }
 
-export default Timeline
+export default WeddingTimeline

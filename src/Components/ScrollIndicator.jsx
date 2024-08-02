@@ -14,7 +14,7 @@ const ScrollIndicator = () => {
   }, [])
 
   return showScrollIndicator ? (
-    <div className='fixed bottom-8 left-1/2 transform -translate-x-1/2'>
+    <div className='fixed bottom-2 left-1/2 transform -translate-x-1/2'>
       <div className='animate-bounce text-pink-500'>
         <svg
           className='w-12 h-12'
