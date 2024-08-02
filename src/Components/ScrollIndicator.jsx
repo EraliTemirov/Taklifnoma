@@ -14,10 +14,10 @@ const ScrollIndicator = () => {
   }, [])
 
   return showScrollIndicator ? (
-    <div className='fixed bottom-4 left-1/2 transform -translate-x-1/2'>
-      <div className='animate-bounce text-pink-400'>
+    <div className='fixed bottom-8 left-1/2 transform -translate-x-1/2'>
+      <div className='animate-bounce text-pink-500'>
         <svg
-          className='w-6   h-6'
+          className='w-12 h-12'
           fill='none'
           stroke='currentColor'
           viewBox='0 0 24 24'
@@ -26,12 +26,12 @@ const ScrollIndicator = () => {
           <path
             strokeLinecap='round'
             strokeLinejoin='round'
-            strokeWidth='2'
+            strokeWidth='4'
             d='M19 9l-7 7-7-7'
           ></path>
         </svg>
         <svg
-          className='w-6 h-6 mt-2'
+          className='w-12 h-12 -mt-6'
           fill='none'
           stroke='currentColor'
           viewBox='0 0 24 24'
@@ -40,12 +40,12 @@ const ScrollIndicator = () => {
           <path
             strokeLinecap='round'
             strokeLinejoin='round'
-            strokeWidth='2'
+            strokeWidth='4'
             d='M19 9l-7 7-7-7'
           ></path>
         </svg>
         <svg
-          className='w-6 h-6 mt-2'
+          className='w-12 h-12 -mt-6'
           fill='none'
           stroke='currentColor'
           viewBox='0 0 24 24'
@@ -54,7 +54,7 @@ const ScrollIndicator = () => {
           <path
             strokeLinecap='round'
             strokeLinejoin='round'
-            strokeWidth='2'
+            strokeWidth='4'
             d='M19 9l-7 7-7-7'
           ></path>
         </svg>
