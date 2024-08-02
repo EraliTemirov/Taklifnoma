@@ -104,7 +104,7 @@ const RSVPForm = () => {
         </div>
         <div className='mb-4'>
           <label htmlFor='message' className='block text-gray-700 text-sm font-bold mb-2'>
-            Bizga bildirmoqchi bolgan tilaklaringiz
+            Bizga bildirmoqchi bo‘lgan tilaklaringiz
           </label>
           <textarea
             id='message'

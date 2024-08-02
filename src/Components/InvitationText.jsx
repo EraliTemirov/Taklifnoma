@@ -36,11 +36,11 @@ const InvitationText = () => {
         Hurmatli Qadrdonim!
       </p>
       <p className='special-font  text-lg sm:text-xl md:text-2xl font-Roboto text-gray-500 leading-loose'>
-        SIZNI BIZ UCHUN MUHIM BOLGAN
+        SIZNI BIZ UCHUN MUHIM BO‘LGAN
         <br />
         QUVONCHLI KUN - NIKOH KECHAMIZNI BIZ
         <br />
-        BILAN BAHAM KOISHGA VA OILAVIY
+        BILAN BAHAM KO‘RISHGA VA OILAVIY
         <br />
         HAYOTGA ILK QADAMIMIZNING GUVOHI
         <br />

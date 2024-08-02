@@ -48,7 +48,7 @@ const Address = () => {
       <div className='text-center mb-4'>
         <p className='special-font text-sm sm:text-base md:text-lg text-gray-500'>
           Sizga qulaylik yaratish uchun manzil xaritasini joyladik. Tashrifingiz bilan bizni xursand
-          qilasiz digan umidamiz!
+          qilasiz degan umiddamiz!
         </p>
       </div>
       <div className='map-container mb-4 w-full max-w-4xl p-6'>
