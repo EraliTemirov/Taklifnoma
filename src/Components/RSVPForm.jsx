@@ -7,16 +7,53 @@ const RSVPForm = () => {
     attendance: '',
     message: '',
   })
+  const [statusMessage, setStatusMessage] = useState('')
 
   const handleChange = (e) => {
     const {name, value} = e.target
     setFormData({...formData, [name]: value})
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Form submission logic goes here
-    console.log(formData)
+
+    // Prepare the data to be sent
+    const data = {
+      fish: formData.name,
+      kim_tomonidan: formData.side, // Fixed the `side` field
+      tadbirda_ishtirok: formData.attendance,
+      tilaklar: formData.message,
+    }
+
+    try {
+      const response = await fetch(
+        'https://plankton-app-9mog7.ondigitalocean.app/api/submit-form',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        }
+      )
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok')
+      }
+
+      // Handle successful response here
+      const result = await response.json()
+      setStatusMessage('Form muvaffaqiyatli yuborildi!')
+      // Optionally, reset form
+      setFormData({
+        name: '',
+        side: '',
+        attendance: '',
+        message: '',
+      })
+    } catch (error) {
+      setStatusMessage("Form yuborishda xato yuz berdi. Iltimos, qayta urinib ko'ring.")
+    }
   }
 
   return (
@@ -29,11 +66,12 @@ const RSVPForm = () => {
           <input
             type='text'
             id='name'
-            name='name '
+            name='name'
             placeholder='Ismingizni kiriting...'
             className='special-font shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
             value={formData.name}
             onChange={handleChange}
+            required
           />
         </div>
         <div className='mb-4'>
@@ -49,6 +87,7 @@ const RSVPForm = () => {
               className='mr-2'
               checked={formData.side === 'Kelin'}
               onChange={handleChange}
+              required
             />
             <label htmlFor='kelin' className='text-gray-700'>
               Kelin
@@ -82,6 +121,7 @@ const RSVPForm = () => {
               className='mr-2'
               checked={formData.attendance === 'Boraman'}
               onChange={handleChange}
+              required
             />
             <label htmlFor='boraman' className='text-gray-700'>
               Albatta, boraman
@@ -124,6 +164,15 @@ const RSVPForm = () => {
           </button>
         </div>
       </form>
+      {statusMessage && (
+        <div
+          className={`mt-4 p-4 rounded text-white ${
+            statusMessage.includes('xato') ? 'bg-red-500' : 'bg-green-500'
+          }`}
+        >
+          {statusMessage}
+        </div>
+      )}
     </div>
   )
 }

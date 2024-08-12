@@ -26,7 +26,6 @@ const Calendar = () => {
 
     return () => {
       if (calendarRef.current) {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
         observer.unobserve(calendarRef.current)
       }
     }
@@ -55,14 +54,14 @@ const Calendar = () => {
           {[...Array(6)].map((_, i) => (
             <div key={i}></div>
           ))}
-          {[...Array(31)].map((_, i) => (
+          {[...Array(30)].map((_, i) => (
             <div
               key={i}
               className={`${
-                i + 1 === 29 ? 'relative flex items-center justify-center' : 'text-gray-700 p-2'
+                i + 1 === 28 ? 'relative flex items-center justify-center' : 'text-gray-700 p-2'
               }`}
             >
-              {i + 1 === 29 ? (
+              {i + 1 === 28 ? (
                 <>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'

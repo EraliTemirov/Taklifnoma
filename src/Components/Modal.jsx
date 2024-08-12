@@ -30,7 +30,7 @@ const Modal = ({toggleModal, setPlaying, audioRef}) => {
             onClick={handleStop}
             className='bg-red-500 hover:bg-red-600 text-white font-bold py-bold py-3 px-6 rounded-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg'
           >
-            Yuq
+            Yo’q
           </button>
         </div>
       </div>
