@@ -39,7 +39,7 @@ const Calendar = () => {
     >
       <div className='text-center'>
         <p className='special-font text-lg sm:text-xl md:text-2xl font-bold text-gray-700'>
-          29-Oktabr 2023-Yil
+          28-Sentyabr 2024-Yil
         </p>
         <p className='special-font text-sm sm:text-base md:text-lg text-gray-500'>Soat 18:00 da</p>
       </div>

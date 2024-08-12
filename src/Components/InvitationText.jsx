@@ -44,7 +44,7 @@ const InvitationText = () => {
         <br />
         HAYOTGA ILK QADAMIMIZNING GUVOHI
         <br />
-        BOLISHGA TAKLIF ETAMIZ!
+        BO‘LISHGA TAKLIF ETAMIZ!
       </p>
       <div className='flex justify-center'>
         <img

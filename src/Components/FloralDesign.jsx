@@ -40,8 +40,8 @@ const FloralDesign = () => {
         alt='Floral Design'
         className='w-full h-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl'
       />
-      <div className='absolute text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-600'>
-        S & F
+      <div className='absolute text-3xl sm:text-3xl md:text-4xl font-semibold text-gray-600'>
+        N & M
       </div>
     </div>
   )

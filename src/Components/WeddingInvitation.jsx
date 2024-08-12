@@ -5,7 +5,7 @@ const WeddingInvitation = () => {
     <div className='wedding-invitation text-center p-4 sm:p-6 md:p-8 lg:p-10 max-w-md mx-auto'>
       <p className='text-gray-500 mb-4 text-sm sm:text-base'>HURMAT BILAN</p>
       <h1 className='text-3xl sm:text-4xl md:text-4xl font-bold text-pink-500 mb-4'>
-        Samir va Farzona!
+        Niyozbek va Maxliyoxon
       </h1>
 
       <div className=' flex items-center justify-center'>
