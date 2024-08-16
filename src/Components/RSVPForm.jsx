@@ -27,8 +27,8 @@ const RSVPForm = () => {
 
     try {
       const response = await axios.post(
-        // "https://plankton-app-9mog7.ondigitalocean.app/api/submit-form",
-        "http://localhost:3001/api/submit-form",
+        "https://plankton-app-9mog7.ondigitalocean.app/api/submit-form",
+        // "http://localhost:3001/api/submit-form",
         data,
         {
           headers: {
